@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Norican&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Norican', cursive;
+      font-size: 20px;
+      background-image:url(snapchat1.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      backdrop-filter: blur(10px);
+      height: 100%;
+    }
+
+    .pricing-container{
+      display:flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap:60px;
+      height:100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pricing-plan{
+      border:3px solid rgb(241, 187, 86);
+      border-radius: 30px;
+      padding:30px;
+      height:250px;
+      /*background-color: #f4f56e;*/
+      background: linear-gradient(135deg, rgb(237, 201, 39) 10%, rgb(252, 255, 0) 100%);
+      align-content: center;
+      box-shadow: 0 0 2px 3px rgb(232, 224, 57);
+      transition: width 5s height 5s;
+      transition-timing-function: ease-in-out;
+    }
+
+    .pricing-plan:hover{
+      box-shadow:0 0 2px 3px rgb(242, 231, 21);
+      box-shadow:0 0 2px 3px rgb(239, 231, 78);
+      box-shadow:0 0 2px 3px rgb(246, 239, 139);
+      transform: scale(1.2, 1.2);
+    }
+    .pricing-plan::after{
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: opacity 0.3s ease-in-out;
+      opacity: 1;
+    }
+
+    .plan-title{
+      text-align: center;
+      font-size:25px;
+    }
+
+    .plan-price{
+      text-align: right;
+      font-size:12px;
+    }
+
+    .plan-features{
+      position:relative;
+      top: 30px;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 15px;
+    }
+
+    .plan-button{
+      position:relative;
+      top:50px;
+      background-color: inherit;
+      padding:5px;
+      border: none;
+    }
+
+    .plan-button:hover{
+      border: 1px solid rgb(221, 225, 11);
+      border-radius: 5px;
+      background-color: rgb(249, 226, 13);
+      box-shadow: 0 0 5px 3px yellow;
+      color: rgb(245, 68, 104);
+
+    }
+
+    #button1{
+      left:60px;
+    }
+    #button2{
+      left:90px;
+    }
+    #button3{
+      left:90px;
+    }
+    .buttonlinks{
+      text-decoration: none;
+      color: inherit;
+    }
+    
+
+    /* Hint: What can you do with a media query and flexbox? */
+    @media (max-width: 1250px) {
+      
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price">$9.99/month</div>
+      <ul class="plan-features">
+        <li>✅ Text Captions</li>
+        <li>✅ 1 User</li>
+        <li>🚫 AI Lens</li>
+      </ul>
+      <a href="#" target="_blank" class="buttonlinks"><button class="plan-button" id="button1">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price">$19.99/month</div>
+      <ul class="plan-features">
+        <li>✅ Text &amp; Voice Captions</li>
+        <li>✅ 5 Users</li>
+        <li>✅ AI Lens</li>
+      </ul>
+      <a href="#" target="_blank" class="buttonlinks"><button class="plan-button" id="button2">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price">$49.99/month</div>
+      <ul class="plan-features">
+        <li>✅ Text &amp; Voice Captions</li>
+        <li>✅ 10 Users</li>
+        <li>✅ AI Lens &amp; portraits</li>
+      </ul>
+      <a href="#" target="_blank" class="buttonlinks"><button class="plan-button" id="button3">Sign Up</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
